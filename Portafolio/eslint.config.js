@@ -35,4 +35,22 @@ export default [
       ],
     },
   },
+  module.exports = {
+    env: {
+      browser: true,
+      es2021: true,
+      node: true, // Asegura que Node.js esté habilitado
+    },
+    extends: [
+      "eslint:recommended",
+      "plugin:react/recommended",
+    ],
+    parserOptions: {
+      ecmaVersion: 12,
+      sourceType: "module",
+    },
+    rules: {
+      "no-undef": "off", // Para ignorar los problemas de "no-undef" en config de Tailwind
+    },
+  }
 ]
